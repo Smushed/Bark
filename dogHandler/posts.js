@@ -49,19 +49,16 @@ module.exports = {
         user.allPostsArray = [],
             user.userProfile.id = userID;
 
-        // //First get the username from the user table
-        // await db.User.findOne({ where: { id: userID } }).then(function (userInfo) {
-        //     user.userProfile.userName = `${userInfo.firstname} ${userInfo.lastname}`
-        // });
-        // if (+userID === loggedInID) {
-        //     user.userProfile.isCurrentUser = true;
-        // };
         console.log(user)
         await db.Posts.findAll({ where: { post_type: "Dog Post" } }).then(function (posts) {
             posts.forEach(function (post) {
                 let feed = {};
                 feed.name = post.text;
                 feed.type = post.post_type;
+                feed.breed = post.breed.toLowerCase()
+                    .split(' ')
+                    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                    .join(' ');
                 user.allPostsArray.push(feed);
             });
             return user.allPostsArray;

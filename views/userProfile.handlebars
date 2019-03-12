@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/styles/navbar.css">
+
 <style>
     .container-fluid {
         background-color: rgb(241, 241, 241);
@@ -5,6 +7,7 @@
         padding-top: 5em;
         padding: 5em;
     }
+
     #dog {
         color: rgb(2, 2, 117);
         align-content: center;
@@ -12,6 +15,7 @@
         font-family: 'Fredoka One', cursive;
         text-shadow: 5px 2px rgb(149, 181, 240);
     }
+
     #profile {
         border: 10px solid rgb(148, 83, 83);
         padding: 5px;
@@ -25,21 +29,21 @@
         font-weight: 800;
         font-size: 4em;
     }
+
     .card-text {
         font-size: 2em;
-}
+    }
 
     #navbar {
         background-color: rgb(188, 119, 115);
 
     }
-
 </style>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 text-center">
-            <div id="dog">Dogs</div>
+            <div id="dog">Your Doggers</div>
         </div>
     </div>
     <div class="row">
@@ -51,10 +55,10 @@
     <br>
     <div class="row">
         {{#each userDogsArray}}
-        <div class="col-sm-12">
-            <div class="card text-center">
+            <div class="col-sm-12">
+                <div class="card text-center">
+                </div>
             </div>
-        </div>
     </div>
     <div class="row">
         <div class="col-sm-4.5">
@@ -79,7 +83,7 @@
         <div class="col-sm-12">
             <p class="mt-5 text-right">
                 {{#if ../userProfile.isCurrentUser}}
-                <a href="/dog/{{this.id}}" class="btn btn-info btn-lg"><i class="fas fa-cog fa-7px"></i></a>
+                    <a href="/dog/{{this.id}}" class="btn btn-info btn-lg"><i class="fas fa-cog fa-7px"></i></a>
                 {{/if}}
                 <br>
             </p>
@@ -87,35 +91,51 @@
         {{/each}}
         <br>
     </div>
+</div>
 
-</div>
-</div>
-</div>
-</div>
-<footer class="page-footer font-small blue fixed-bottom scrolling-footer" id="navbar">
+<footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
 
     <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
 
-            <a href="/createdog" class="btn-lg btn-paw mx-1" type="button" role="button">
-                <i class="fas fa-paw fa-5px"></i>
+            <a href="/home" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    Home
+                    <br />
+                    <i class="fas fa-paw fa-5px"></i>
+                    <i class="fas fa-paw fa-5px"></i>
+                </button>
             </a>
         </li>
         <li class="list-inline-item">
-            <a href="/posts" class="btn-floating btn-lg btn-pen mx-1" type="button" role="button">
-                <i class="fas fa-pen-fancy fa-5px"></i>
+            <a href="/posts" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    New Post
+                    <br />
+                    <i class="fas fa-pen-fancy fa-5px"></i>
+                    <i class="fas fa-pen-fancy fa-5px"></i>
+                </button>
             </a>
         </li>
         <li class="list-inline-item">
-            <a href="/allposts" class="btn-floating btn-lg btn-bone mx-1" type="button" role="button">
-                <i class="fas fa-bone fa-5px"> </i>
+            <a href="/allposts" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    View All Posts
+                    <br />
+                    <i class="fas fa-bone fa-5px"></i>
+                    <i class="fas fa-bone fa-5px"></i>
+                </button>
             </a>
         </li>
         <li class="list-inline-item">
-            <a href="/lostdogs" class="btn-floating btn-lg btn-arrow mx-1" type="button" role="button">
-                <i class="fas fa-location-arrow fa-5px"> </i>
+            <a href="/lostdogs" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    Lost Dogs
+                    <br />
+                    <i class="fas fa-location-arrow fa-5px"></i>
+                    <i class="fas fa-location-arrow fa-5px"></i>
+                </button>
             </a>
         </li>
     </ul>
 </footer>
-</div>
