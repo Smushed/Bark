@@ -1,33 +1,29 @@
 <style>
-
     img {
-    
-    width: 150%;
-    margin-left: -25%;
-  }
+
+        width: 150%;
+        margin-left: -25%;
+    }
 
     h1 {
-    color: rgb(255, 201, 127);
-    font-size: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50%;
-    text-align: center;
-    text-shadow: 2px 2px 2px black;
-    font-family: hiruko;
-}
+        color: rgb(255, 201, 127);
+        font-size: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50%;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        font-family: hiruko;
+    }
 
-body {
+    body {
+        background-color: rgb(142, 179, 183);
+    }
 
-background-color: rgb(142, 179, 183);
-
-}
-  
-  .form-control {
-      border-radius: 25px;
-      background-color: rgb(27, 88, 119);
-  }
-
+    .form-control {
+        border-radius: 25px;
+        background-color: rgb(27, 88, 119);
+    }
 </style>
 
 <div class="container">
@@ -39,12 +35,11 @@ background-color: rgb(142, 179, 183);
             <br>
             <br>
             {{#if message}}
-            <div class="alert">{{message}}</div>
+                <div class="alert">{{message}}</div>
             {{/if}}
             <div class="form-group">
                 <form id="signin" name="signin" method="post" action="signin">
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="E-mail">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

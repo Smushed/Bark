@@ -1,57 +1,58 @@
-<script src="/js/createDog.js"></script>
+<link rel="stylesheet" href="/styles/navbar.css">
 
 <style>
     img {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-top: 20%;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 10px solid yellow;
-        }
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 20%;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 10px solid yellow;
+    }
 
-        body {
-            background-color: rgb(55, 98, 116);
-            font-family: 'Fredoka One', cursive;
-        }
+    body {
+        background-color: rgb(55, 98, 116);
+        font-family: 'Fredoka One', cursive;
+    }
 
-        #breedBtn {
-            background-color: pink;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    #breedBtn {
+        background-color: pink;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        select {
-            width: 100%;
-            margin-top: 10px;
-        }
+    select {
+        width: 100%;
+        margin-top: 10px;
+    }
 
-        label {
-            width: 100%;
-            color: white;
-        }
+    label {
+        width: 100%;
+        color: white;
+    }
 
-        .fileUpload {
-            margin-top: 10px;
-        }
+    .fileUpload {
+        margin-top: 10px;
+    }
 
-        .gender-btn {
-            align-self: auto;
-        }
-        #male {
-            background-color: rgb(143, 179, 179);
-        }
+    .gender-btn {
+        align-self: auto;
+    }
 
-        #female {
-            background-color: rgb(143, 179, 179);
-        }
+    #male {
+        background-color: rgb(143, 179, 179);
+    }
 
-        #addDog {
-            background-color: rgb(219, 137, 131);
-        }
-    </style>
+    #female {
+        background-color: rgb(143, 179, 179);
+    }
+
+    #addDog {
+        background-color: rgb(219, 137, 131);
+    }
+</style>
 
 <img src="https://images.pexels.com/photos/1345191/pexels-photo-1345191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="cute puppy">
 <div class="errorMessage text-center" style="display: none">Please input a name and image for the dog</div>
@@ -59,8 +60,7 @@
 <div class="container">
     <div class="row">
         <div class="col-10 offset-1">
-            <form class="align-center" name="newDog" method="post" onsubmit="validateNewDog()" action="/api/createdog"
-                enctype="multipart/form-data">
+            <form class="align-center" name="newDog" method="post" onsubmit="validateNewDog()" action="/api/createdog" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="formGroupExampleInput"></label>
                     <input name="dog_name" class="form-control" type="text" placeholder="Dog Name">
@@ -85,3 +85,52 @@
         </div>
     </div>
 </div>
+
+<footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
+
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+
+            <a href="/home" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    Home
+                    <br />
+                    <i class="fas fa-paw fa-5px"></i>
+                    <i class="fas fa-paw fa-5px"></i>
+                </button>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="/posts" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    New Post
+                    <br />
+                    <i class="fas fa-pen-fancy fa-5px"></i>
+                    <i class="fas fa-pen-fancy fa-5px"></i>
+                </button>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="/allposts" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    View All Posts
+                    <br />
+                    <i class="fas fa-bone fa-5px"></i>
+                    <i class="fas fa-bone fa-5px"></i>
+                </button>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="/lostdogs" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    Lost Dogs
+                    <br />
+                    <i class="fas fa-location-arrow fa-5px"></i>
+                    <i class="fas fa-location-arrow fa-5px"></i>
+                </button>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<script src="/js/createDog.js"></script>

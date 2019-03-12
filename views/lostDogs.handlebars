@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="/styles/navbar.css">
+
 <style>
     .mp-reset {
-    margin: 0;
-    padding: 0;
-}
+        margin: 0;
+        padding: 0;
+    }
 </style>
 
 <div class="container">
@@ -11,52 +13,78 @@
             <h2 class="text-center">Lost Dogs!</h2>
             <div class="row">
                 {{#each lostDogArray}}
-                <div class="card mt-4 col-12">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <h3 class="text-center">{{this.name}}</h3>
-                                <div class="text-center">
-                                    {{cloudinaryIMG this.picture width=150 height=150}}
+                    <div class="card mt-4 col-12">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3 class="text-center">{{this.name}}</h3>
+                                    <div class="text-center">
+                                        {{cloudinaryIMG this.picture width=150 height=150}}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <p class="mp-reset">{{this.breed}}</p>
-                                <p class="mp-reset"><strong>Contact: </strong>{{this.ownerName}}</p>
-                                <p class="mp-reset"><strong>Phone Number: </strong>{{this.phone}}</p>
-                                <p class="mp-reset"><strong>From: </strong>{{this.zip}}</p>
-                                <p class="mp-reset">{{this.text}}</p>
-                                {{#if this.ownDog}}
-                                <button class="foundDog btn btn-primary" value="{{this.id}}">Found them!</button>
-                                {{/if}}
+                                <div class="col-6">
+                                    <p class="mp-reset">{{this.breed}}</p>
+                                    <p class="mp-reset"><strong>Contact: </strong>{{this.ownerName}}</p>
+                                    <p class="mp-reset"><strong>Phone Number: </strong>{{this.phone}}</p>
+                                    <p class="mp-reset"><strong>From: </strong>{{this.zip}}</p>
+                                    <p class="mp-reset">{{this.text}}</p>
+                                    {{#if this.ownDog}}
+                                        <button class="foundDog btn btn-primary" value="{{this.id}}">Found them!</button>
+                                    {{/if}}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 {{/each}}
             </div>
         </div>
     </div>
-    <footer class="page-footer font-small blue fixed-bottom scrolling-footer">
-
-        <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-                <a href="/user/posts/{{userId}}" class="btn-lg btn-paw mx-1" type="button" role="button">
-                    <i class="fas fa-paw"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="/allPosts" class="btn-floating btn-lg btn-bone mx-1" type="button" role="button">
-                    <i class="fas fa-bone"> </i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="/lostdogs" class="btn-floating btn-lg btn-arrow mx-1" type="button" role="button">
-                    <i class="fas fa-location-arrow"> </i>
-                </a>
-            </li>
-        </ul>
-    </footer>
 </div>
+<footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
+
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+
+            <a href="/home" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    Home
+                    <br />
+                    <i class="fas fa-paw fa-5px"></i>
+                    <i class="fas fa-paw fa-5px"></i>
+                </button>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="/posts" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    New Post
+                    <br />
+                    <i class="fas fa-pen-fancy fa-5px"></i>
+                    <i class="fas fa-pen-fancy fa-5px"></i>
+                </button>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="/allposts" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    View All Posts
+                    <br />
+                    <i class="fas fa-bone fa-5px"></i>
+                    <i class="fas fa-bone fa-5px"></i>
+                </button>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="/lostdogs" class="mx-1">
+                <button class="btn btn-secondary btn-lg nav-btn">
+                    Lost Dogs
+                    <br />
+                    <i class="fas fa-location-arrow fa-5px"></i>
+                    <i class="fas fa-location-arrow fa-5px"></i>
+                </button>
+            </a>
+        </li>
+    </ul>
+</footer>
 
 <script src="/js/foundDog.js"></script>

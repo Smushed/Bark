@@ -5,13 +5,12 @@ const userPosts = require(`../dogHandler/posts`);
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    db.Example.findAll({}).then(function () {
-      res.render("index", {});
-    });
+    res.render("index", {});
   });
 
   app.get("/home", isLoggedIn, function (req, res) {
     const userId = req.user.id;
+    console.log(userId)
     res.redirect(`/user/${userId}`);
   });
 
