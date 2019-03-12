@@ -1,0 +1,87 @@
+<script src="/js/createDog.js"></script>
+
+<style>
+    img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 20%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 10px solid yellow;
+        }
+
+        body {
+            background-color: rgb(55, 98, 116);
+            font-family: 'Fredoka One', cursive;
+        }
+
+        #breedBtn {
+            background-color: pink;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        select {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        label {
+            width: 100%;
+            color: white;
+        }
+
+        .fileUpload {
+            margin-top: 10px;
+        }
+
+        .gender-btn {
+            align-self: auto;
+        }
+        #male {
+            background-color: rgb(143, 179, 179);
+        }
+
+        #female {
+            background-color: rgb(143, 179, 179);
+        }
+
+        #addDog {
+            background-color: rgb(219, 137, 131);
+        }
+    </style>
+
+<img src="https://images.pexels.com/photos/1345191/pexels-photo-1345191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="cute puppy">
+<div class="errorMessage text-center" style="display: none">Please input a name and image for the dog</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <form class="align-center" name="newDog" method="post" onsubmit="validateNewDog()" action="/api/createdog"
+                enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input name="dog_name" class="form-control" type="text" placeholder="Dog Name">
+                </div>
+                <select name="breed">
+                    <option value="golden doodle">Golden Doodle</option>
+                    <option value="bulldog">Bulldog</option>
+                </select>
+                <br>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <input class="fileUpload" type="file" name="dog_photo">
+                <br>
+                <hr>
+                <label for="dog_note" class="text-center">What are they like?</label>
+                <textarea class="form-control" id="dogNotes" name="dog_note" rows="3"></textarea>
+                <input class="btn btn-primary btn-sm" type="submit" value="Add Dog" />
+            </form>
+        </div>
+    </div>
+</div>
