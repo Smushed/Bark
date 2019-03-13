@@ -1,0 +1,51 @@
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid yellow;
+}
+
+body {
+    background-color: rgb(55, 98, 116);
+    font-family: 'Fredoka One', cursive;
+}
+
+#breedBtn {
+    background-color: pink;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+select {
+    width: 100%;
+    margin-top: 10px;
+}
+
+label {
+    width: 100%;
+    color: white;
+}
+
+.fileUpload {
+    margin-top: 10px;
+}
+
+.gender-btn {
+    align-self: auto;
+}
+
+#male {
+    background-color: rgb(143, 179, 179);
+}
+
+#female {
+    background-color: rgb(143, 179, 179);
+}
+
+#addDog {
+    background-color: rgb(219, 137, 131);
+}
