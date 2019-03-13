@@ -1,23 +1,36 @@
-<div class="container">
+<link rel="stylesheet" href="./styles/signinSignup.css">
+
+<div class="container-fluid">
     <div class="row">
         <div class="col-8 offset-2">
-            <h1> Sign-In </h1>
+            <h1 class="header"> Sign-In </h1>
             <img src="https://cdn.dribbble.com/users/1055986/screenshots/3424194/doberman-walk.gif" alt="Dancin Dauschand">
             <br>
             <br>
             <br>
             {{#if message}}
-            <div class="alert">{{message}}</div>
+                <div class="alert">{{message}}</div>
             {{/if}}
-            <div class="form-group">
-                <form id="signin" name="signin" method="post" action="signin">
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+            <form id="signin" name="signin" method="post" action="signin">
+                <input type="email" name="email" class="form-control sign-in-input" placeholder="E-mail">
+                <input type="password" name="password" class="form-control sign-in-input" placeholder="Password">
+                <br />
+                <div class="row">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-lg btn-primary custom-btn">Sign In</button>
+                    </div>
+                </div>
+            </form>
+            <br />
+            <div class="row">
+                <div class="col-12">
+                    <a href="/signup">
+                        <button class="btn btn-lg btn-secondary custom-btn sign-up-btn">
+                            Sign Up
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
-    <a href="/signup"><button class="signUpBtn">Sign Up</button></a>
 </div>
