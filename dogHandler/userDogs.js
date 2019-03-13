@@ -7,10 +7,11 @@ module.exports = {
         newDog.UserId = userID;
         newDog.photo_url = "";
         newDog.lost = false;
-        console.log(dogPhotoPath)
+
         //Upload the image the user selected to cloudinary
         await cloudinary.uploader.upload(dogPhotoPath, function (error, result) {
             if (error) {
+                console.log(error)
                 throw error
             }
             //Get the image name and type from cloudinary and assign it to the user's dog they inputted
