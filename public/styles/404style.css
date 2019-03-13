@@ -1,0 +1,10 @@
+body {
+    background: rgb(246, 160, 94);
+}
+.not-found-image {
+    border-radius: 10px;
+    width: 100%;
+}
+.not-found-header {
+    margin-top: 50px;
+}
