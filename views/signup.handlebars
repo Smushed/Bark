@@ -1,128 +1,41 @@
-<style>
+<link rel="stylesheet" href="./styles/signup.css">
 
-
-    h1 {
-        font-family:'Fredoka One', cursive;
-        text-align: center;
-        color: rgb(57, 125, 161);
-        text-shadow: 4px 4px navy;
-        font-size: 106px;
-}
-    body {
-        background-color: rgb(227, 227, 227);
-        display: block;
-        margin: auto;
-    }
-
-    form {
-        text-align: center;
-        font-size: 36px;
-    }
-
-    .email {
-        border-radius: 25px;
-        border: 5px solid rgb(254, 191, 120);
-        padding: 20px;
-        width: 75%;
-        height: 25%;
-        background-color: rgb(27, 88, 119);
-        text-align: center;
-    }
-
-    .firstname {
-        border-radius: 25px;
-        border: 5px solid rgb(254, 191, 120);
-        padding: 20px;
-        width: 75%;
-        height: 25%;
-        background-color: rgb(27, 88, 119);
-        text-align: center;
-    }
-
-    .lastname {
-        border-radius: 25px;
-        border: 5px solid rgb(254, 191, 120);
-        padding: 20px;
-        width: 75%;
-        height: 25%;
-        background-color: rgb(27, 88, 119);
-        text-align: center;
-    }
-
-    .zip {
-        border-radius: 25px;
-        border: 5px solid rgb(254, 191, 120);
-        padding: 20px;
-        width: 75%;
-        height: 25%;
-        background-color: rgb(27, 88, 119);
-        text-align: center;
-    }
-
-    .phone_number {
-        border-radius: 25px;
-        border: 5px solid rgb(254, 191, 120);
-        padding: 20px;
-        width: 75%;
-        height: 25%;
-        background-color: rgb(27, 88, 119);
-        text-align: center;
-    }
-
-    .password {
-        border-radius: 25px;
-        border: 5px solid rgb(254, 191, 120);
-        padding: 20px;
-        width: 75%;
-        height: 25%;
-        background-color: rgb(27, 88, 119);
-        text-align: center;
-    }
-
-    #submit {
-        background-color: burlywood;
-    }
-    
-</style>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="mx-auto">
-            <h1> Sign-Up </h1>
-            <img src="https://cdn.dribbble.com/users/488076/screenshots/3650226/dog_running_003.gif" alt="green dog">
+            <h1 class="header"> Sign-Up </h1>
+            <img src="https://cdn.dribbble.com/users/488076/screenshots/3650226/dog_running_003.gif" class="sign-up-dog" alt="green dog">
 
             {{#if message}}
-            <div class="alert">{{message}}</div>
+                <div class="alert text-center">{{message}}</div>
             {{/if}}
-
-            <div class="errorMessages"></div>
 
             <form id="signup" name="signup" onsubmit="validateSignUp()" method="post" action="/signup">
                 {{!-- <label for="email">Email Address</label> --}}
-                <input class="email" name="email" type="email" placeholder="E-mail" />
-                <br>
-                <br>
+                <input name="email" class="form-input" type="email" placeholder="E-mail" />
                 {{!-- <label for="firstname">Firstname</label> --}}
-                <input name="firstname" class="firstname" type="text" placeholder="First Name" />
-                <br>
-                <br>
+                <input name="firstname" class="form-input" type="text" placeholder="First Name" />
                 {{!-- <label for="lastname">Lastname</label> --}}
-                <input name="lastname" class="lastname" type="text" placeholder="Last Name" />
-                <br>
-                <br>
+                <input name="lastname" class="form-input" type="text" placeholder="Last Name" />
                 {{!-- <label for="zip">Zip Code</label> --}}
-                <input name="zip" class="zip" type="text" placeholder="Zip Code" />
-                <br>
-                <br>
+                <input name="zip" class="form-input" type="text" placeholder="Zip Code" />
                 {{!-- <label for="phone_number">Phone Number</label> --}}
-                <input name="phone_number" class="phone_number" type="text" placeholder="Phone Number" />
-                <br>
-                <br>
+                <input name="phone_number" class="form-input" type="text" placeholder="Phone Number" />
                 {{!-- <label for="password">Password</label> --}}
-                <input name="password" class="password" type="password" placeholder="New Password" />
-                <br>
+                <input name="password" class="form-input" type="password" placeholder="Password" />
+                <br />
                 <input class="btn btn-primary btn-lg" id="submit" type="submit" value="Sign Up" />
             </form>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <a href="/signin">
+                <button class="btn btn-lg btn-secondary link-to-sign-in">
+                    Sign In
+                </button>
+            </a>
         </div>
     </div>
 </div>

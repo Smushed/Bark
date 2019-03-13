@@ -1,0 +1,55 @@
+
+/* Sign Up */
+
+.header {
+    font-family:'Fredoka One', cursive;
+    text-align: center;
+    color: rgb(57, 125, 161);
+    text-shadow: 4px 4px navy;
+    font-size: 150px;
+    margin-top: 100px;
+}
+
+.sign-up-dog {
+    margin-left: 100px;
+}
+
+body {
+    background-color: rgb(227, 227, 227);
+    display: block;
+    margin: auto;
+}
+
+form {
+    text-align: center;
+    font-size: 36px;
+}
+
+.form-input {
+    border-radius: 25px;
+    padding: 20px;
+    width: 75%;
+    height: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px black;
+}
+
+#submit {
+    background-color: rgb(216, 154, 74);
+    border: 2px burlywood solid;
+    height: 100px;
+    width: 50%;
+    font-size: 40px;
+}
+
+.alert {
+    font-size: 30px;
+}
+
+.link-to-sign-in {
+    height: 100px;
+    width: 490px;
+    font-size: 40px;
+    margin-top: 10px;
+}

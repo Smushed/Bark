@@ -1,9 +1,10 @@
 const cloudinary = require(`cloudinary`).v2;
+require("dotenv").config();
 
 cloudinary.config({
-    cloud_name: 'smushed',
-    api_key: '753626427667399',
-    api_secret: 'yeU5XwznfoPWEr7W6WtAoYLmgj8'
+    cloud_name: process.env.CLOUDINARY_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
 module.exports = cloudinary;
