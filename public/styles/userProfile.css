@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+#header {
+    color: rgb(2, 2, 117);
+    align-content: center;
+    font-size: 7em;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 5px 2px rgb(149, 181, 240);
+    margin-top: 50px;
+}
+
+.custom-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#profile {
+    border: 10px solid rgb(148, 83, 83);
+    padding: 5px;
+    margin: 20px 10px 20px 10px;
+    box-shadow: 0 0 2em rgb(85, 148, 206);
+
+}
+
+.card-title {
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 4em;
+}
+
+.card-text {
+    font-size: 2em;
+}
+
+#navbar {
+    background-color: rgb(188, 119, 115);
+
+}
