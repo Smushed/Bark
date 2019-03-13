@@ -4,14 +4,14 @@ const userPosts = require(`../dogHandler/posts`);
 
 module.exports = function (app) {
   // Load index page
-  app.get("/", function (req, res) {
-    res.render("index", {});
-  });
-
-  app.get("/home", isLoggedIn, function (req, res) {
+  app.get("/", isLoggedIn, function (req, res) {
     const userId = req.user.id;
     console.log(userId)
     res.redirect(`/user/${userId}`);
+  });
+
+  app.get("/home", function (req, res) {
+    res.render("home", {});
   });
 
   app.get("/createdog", isLoggedIn, function (req, res) {
@@ -137,6 +137,6 @@ module.exports = function (app) {
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
       return next();
-    res.redirect('/signin');
+    res.redirect('/');
   };
 };
