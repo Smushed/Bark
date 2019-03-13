@@ -1,0 +1,10 @@
+#navbar {
+    background-color: rgb(188, 119, 115);
+    height: 150px;
+}
+.nav-btn {
+    height: 120px;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
