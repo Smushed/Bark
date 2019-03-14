@@ -1,54 +1,20 @@
 <link rel="stylesheet" href="/styles/navbar.css">
+<link rel="stylesheet" href="/styles/userProfile.css">
 
-<style>
-    .container-fluid {
-        background-color: rgb(241, 241, 241);
-        margin: auto;
-        padding-top: 5em;
-        padding: 5em;
-    }
-
-    #dog {
-        color: rgb(2, 2, 117);
-        align-content: center;
-        font-size: 7em;
-        font-family: 'Fredoka One', cursive;
-        text-shadow: 5px 2px rgb(149, 181, 240);
-    }
-
-    #profile {
-        border: 10px solid rgb(148, 83, 83);
-        padding: 5px;
-        margin: 20px 10px 20px 10px;
-        box-shadow: 0 0 2em rgb(85, 148, 206);
-
-    }
-
-    .card-title {
-        font-family: monospace;
-        font-weight: 800;
-        font-size: 4em;
-    }
-
-    .card-text {
-        font-size: 2em;
-    }
-
-    #navbar {
-        background-color: rgb(188, 119, 115);
-
-    }
-</style>
-
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-sm-12 text-center">
-            <div id="dog">Your Dogos</div>
+            <div id="header">Your Dogos</div>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 text-right">
-            <div id="plus"><a href="/createdog"><button class="fas fa-plus-circle fa-3x"></button></a>
+            <div id="plus">
+                <a href="/createdog">
+                    <button class="fas fa-plus-circle fa-2x btn btn-secondary">
+                        <span class="custom-btn"> Add Dog</span>
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -98,7 +64,7 @@
     <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
 
-            <a href="/home" class="mx-1">
+            <a href="/" class="mx-1">
                 <button class="btn btn-secondary btn-lg nav-btn">
                     Home
                     <br />
