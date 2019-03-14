@@ -33,10 +33,10 @@ module.exports = function (app) {
   app.post("/api/newpost", isLoggedIn, async function (req, res) {
 
     //Goes to the userDogs object to create the new dog to make the routes cleaner
-    const userID = await userPosts.createPost(req.body, req.user.id)
+    await userPosts.createPost(req.body, req.user.id)
 
     //This then takes them to the page which displays all of their posts
-    res.redirect(`/user/posts/${userID}`)
+    res.redirect(`/allposts`)
   });
 
   app.post("/api/updatepost", async function (req, res) {
