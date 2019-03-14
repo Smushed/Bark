@@ -32,24 +32,22 @@
                 {{cloudinaryIMG this.picture width=250 height=250}}
             </div>
         </div>
-        <div class="col-sm-2.5">
-        </div>
 
-        <div class="col-sm-5">
+        <div class="col-sm-7.5">
             <div class="card-body">
                 <h3 class="card-title"> {{this.name}} </h3>
-                <p class="card-text"><i class="fas fa-dog fa-5px"> {{this.breed}} </i> </p>
-                <p class="card-text"><i class="fas fa-circle fa-5px"> {{this.gender}} </i> </p>
-                <p class="card-text"><i class="fas fa-sticky-note fa-5px"> {{this.note}} </i> </p>
-                <a href="/posts" class="btn btn-dark">Create a Post</a>
+                <p class="card-text"><i class="fas fa-dog fa-3x"> </i><span class="dog-text"> {{this.breed}}</span></p>
+                <p class="card-text"><i class="fas fa-circle fa-3x"> </i><span class="dog-text"> {{this.gender}}</span> </p>
+                <p class="card-text"><i class="fas fa-sticky-note fa-3x"> </i><span class="dog-text"> {{this.note}}</span> </p>
+                <a href="/posts" class="btn btn-dark btn-lg">Create a Post</a>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <p class="mt-5 text-right">
+            <p class="text-right">
                 {{#if ../userProfile.isCurrentUser}}
-                    <a href="/dog/{{this.id}}" class="btn btn-info btn-lg"><i class="fas fa-cog fa-7px"></i></a>
+                    <a href="/dog/{{this.id}}" class="btn btn-info btn-lg"><i class="fas fa-cog fa-2x"></i></a>
                 {{/if}}
                 <br>
             </p>

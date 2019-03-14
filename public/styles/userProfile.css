@@ -24,12 +24,22 @@ body {
     box-shadow: 0 0 2em rgb(85, 148, 206);
 }
 
+.card-body {
+    width: 100%;
+}
+
 .card-title {
     font-family: monospace;
     font-weight: 800;
     font-size: 4em;
 }
 
+.dog-text {
+    font-size: 36px;
+    font-family: monospace;
+    font-weight: 800;
+}
+
 .card-text {
-    font-size: 2em;
+    
 }
