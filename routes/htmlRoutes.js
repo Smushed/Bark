@@ -49,10 +49,10 @@ module.exports = function (app) {
   })
 
 
-  app.get("/posts", function (req, res) {
+  app.get("/posts", isLoggedIn, function (req, res) {
     const userId = req.user.id;
 
-    res.render("createPosts", { message: req.flash("error"), userId });
+    res.render("createPost", { message: req.flash("error"), userId });
   });
 
   app.get("/post/:postId", function (req, res) {
