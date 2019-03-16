@@ -73,13 +73,11 @@ module.exports = function (app) {
     const userId = req.user.id;
     //Goes to the dogHandler object and grabs all the dogs for the user
     //This is used to keep the routes page clean
-    const user = await userPosts.getAllPosts(req.params.userID);
+    const user = await userPosts.getAllPosts(userId);
 
     //Then sending the userProfile object and the userDogsArray to handlebars for processing
     res.render("allPosts", {
-      userProfile: user.userProfile,
       allPostsArray: user.allPostsArray,
-      userId,
     });
   });
 

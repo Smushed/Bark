@@ -42,28 +42,43 @@ module.exports = {
         });
         return user;
     },
-    getAllPosts: async function (userID, loggedInID) {
+    getAllPosts: async function (loggedInID) {
         let user = {};
         user.feed = {};
-        user.userProfile = {};
-        user.allPostsArray = [],
-            user.userProfile.id = userID;
+        user.allPostsArray = [];
 
-        console.log(user)
-        await db.Posts.findAll({ where: { post_type: "Dog Post" } }).then(function (posts) {
-            posts.forEach(function (post) {
-                let feed = {};
-                feed.name = post.text;
-                feed.type = post.post_type;
-                feed.breed = post.breed.toLowerCase()
-                    .split(' ')
-                    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                    .join(' ');
-                user.allPostsArray.push(feed);
+        // console.log(user)
+        await db.Posts.findAll({ where: { $or: [{ post_type: { $eq: "Dog Post" } }, { post_type: { $eq: "Meet Up" } }] } })
+            .then(function (posts) {
+                posts.forEach(async function (post) {
+                    let feed = {};
+
+                    feed.UserId = post.UserId;
+                    feed.body = post.text;
+                    feed.type = post.post_type;
+                    feed.breed = post.breed.toLowerCase()
+                        .split(' ')
+                        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                        .join(' ');
+                    feed.username = "";
+                    user.allPostsArray.push(feed);
+                });
+            }).then(() => {
+                for (let i = 0; i < user.allPostsArray.length; i++) {
+                    console.log(user.allPostsArray[i].UserId)
+                    let firstname = "";
+                    db.User.find({ where: { id: user.allPostsArray[i].UserId } })
+                        .then(user => {
+                            firstname = user.firstname
+                        }).then(() => {
+                            user.allPostsArray[i].username = firstname
+                        });
+                }
             });
-            return user.allPostsArray;
-        });
+        console.log(user)
+
         return user;
+
     },
     updatePost: async function (updatedPost) {
         let userID = "";

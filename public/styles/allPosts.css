@@ -35,5 +35,11 @@ body {
 }
 
 .post-type {
+    margin-top: 0;
     font-size: 22px;
+}
+
+.post-user {
+    font-size: 30px;
+    margin-bottom: 0;
 }
