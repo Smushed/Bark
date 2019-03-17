@@ -18,7 +18,7 @@
                 {{#if dog.isCurrentUser}}
                 <div class="col-6">
                     <p class="mt-5">
-                        <form id="updateDog" method="post" action="/api/updatedog" enctype="multipart/form-data">
+                        <form id="updateDog" class="text-center" method="post" action="/api/updatedog" enctype="multipart/form-data">
                             {{!-- Below must be hidden as it passes in what dog we are updating and we don't want
                                     users to change it --}}
                             <input name="id" type="hidden" value="{{dog.id}}">
@@ -26,14 +26,14 @@
                             <input name="dog_name" class="updatedDogName" type="text" />
                             <br><br>
                             <label class="btn btn-info btn-file">
-                                Update Your Dog's Photo <input class="fileUpload" name="dog_photo" type="file" style="display: none;">
+                                Update Your Doggo's Photo <input class="fileUpload" name="dog_photo" type="file" style="display: none;">
                             </label>
 
-                            <input class="btn btn-success newDogSubmit btn-custom" type="submit" value="Update Dog" />
+                            <input class="btn btn-success newDogSubmit btn-custom" type="submit" value="Update Doggo" />
                         </form>
                         <br>
                         <input class="btn btn-danger deleteDog btn-custom lost-delete-margin" data-id="{{dog.id}}" type="submit" value="Delete Dog" />
-                        <button class="btn btn-secondary lostDog btn-custom lost-delete-margin">
+                        <button class="btn btn-secondary lostDog btn-custom lost-delete-margin" data-id="{{dog.id}}" data-breed="{{dog.breed}}" data-name="{{dog.dog_name}}">
                             {{dog.dog_name}} is Lost!
                         </button>
                     </p>

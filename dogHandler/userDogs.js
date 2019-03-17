@@ -122,15 +122,16 @@ module.exports = {
         let lostDogPost = {};
         lostDogPost.text = dogInfo.text;
         lostDogPost.breed = dogInfo.breed;
-        lostDogPost.post_type = "lost_dog";
+        lostDogPost.post_type = "Lost Dog";
         //Get the user data for the dog
+        //This is so the post saves the user that makes the request
         await db.Dog.findOne({ where: { id: dogInfo.id } }).then(function (dog) {
             lostDogPost.UserId = dog.UserId;
         });
         //Update the dog table to show that the dog is missing
         await db.Dog.update({ lost: 1 }, { where: { id: dogInfo.id } });
         //Make a new post that the dog is missing
-        await db.Posts.create(lostDogPost).then(function (dbPost) {
+        await db.Posts.create(lostDogPost).then((DBPost) => {
             console.log("Success");
         }).catch(function (error) {
             console.log(error);
@@ -172,8 +173,10 @@ module.exports = {
         //This is findOne as you can only have one post per lost dog
         //TODO make an association of the dog to the post - Right now if a user has multiple dogs lost only the first post shows
         for (let i = 0; i < lostDogArray.length; i++) {
-            await db.Posts.findOne({ where: { UserId: lostDogArray[i].userId, post_type: "lost_dog" } }).then(function (lostDogPost) {
-                lostDogArray[i].text = lostDogPost.dataValues.text;
+            await db.Posts.findOne({ where: { UserId: lostDogArray[i].userId, post_type: "Lost Dog" } }).then(function (lostDogPost) {
+                if (lostDogPost) {
+                    lostDogArray[i].text = lostDogPost.dataValues.text;
+                }
             });
         };
 

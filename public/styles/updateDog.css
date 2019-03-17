@@ -55,3 +55,7 @@ body {
 .lost-delete-margin {
     margin: 0;
 }
+
+.swal2-popup { 
+    font-size: 2.5rem ! important;
+}
