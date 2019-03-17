@@ -25,15 +25,17 @@
                             <label for="dog_name" class="update-name-label">Update Name</label>
                             <input name="dog_name" class="updatedDogName" type="text" />
                             <br><br>
-                            Select an Image
-                            <input class="fileUpload" type="file" name="dog_photo">
-                            <br><br>
-                            <input class="btn btn-success newDogSubmit" type="submit" value="Update Dog" />
+                            <label class="btn btn-info btn-file">
+                                Update Your Dog's Photo <input class="fileUpload" name="dog_photo" type="file" style="display: none;">
+                            </label>
+
+                            <input class="btn btn-success newDogSubmit btn-custom" type="submit" value="Update Dog" />
                         </form>
-                        <input class="btn btn-danger deleteDog" data-id="{{dog.id}}" type="submit" value="Delete Dog" />
                         <br>
-                        <button class="btn btn-primary lostDog" data-toggle="modal" data-target="#lostDogModal">{{dog.dog_name}}
-                            is Lost!</button>
+                        <input class="btn btn-danger deleteDog btn-custom lost-delete-margin" data-id="{{dog.id}}" type="submit" value="Delete Dog" />
+                        <button class="btn btn-secondary lostDog btn-custom lost-delete-margin" data-toggle="modal" data-target="#lostDogModal">
+                            {{dog.dog_name}} is Lost!
+                        </button>
                     </p>
                 </div>
                 {{/if}}
