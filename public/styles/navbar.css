@@ -1,6 +1,9 @@
 #navbar {
     height: 150px;
 }
+.footer-margin {
+    margin-top: 100px;
+}
 .nav-btn {
     height: 120px;
     font-size: 35px;

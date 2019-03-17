@@ -20,53 +20,55 @@
     </div>
     <br>
     {{#each userDogsArray}}
-        <div class="row">
-            <div class="col-sm-5">
-                <div id="profile" class="card-header">
-                    {{cloudinaryIMG this.picture width=250 height=250}}
-                </div>
-            </div>
-
-            <div class="col-sm-7">
-                <div class="card-body mp-reset">
-                    <p class="float-right">
-                        {{#if ../userProfile.isCurrentUser}}
-                            <a href="/dog/{{this.id}}" class="btn btn-info btn-lg">
-                                <i class="fas fa-cog fa-2x"></i>
-                                <span class="button-text">Edit Dog</span>
-                            </a>
-                        {{/if}}
-                        <br>
-                    </p>
-
-                    <h3 class="card-title full-width"> {{this.name}} </h3>
-
-                    <p class="card-text">
-                        <i class="fas fa-dog fa-3x float-left"> </i>
-                        <span class="dog-text full-width">
-                            {{this.breed}}
-                        </span>
-                    </p>
-
-                    <p class="card-text">
-                        <i class="fas fa-circle fa-3x float-left"> </i>
-                        <span class="dog-text full-width">
-                            {{this.gender}}
-                        </span>
-                    </p>
-
-                    <p class="card-text">
-                        <i class="fas fa-sticky-note fa-3x float-left"></i>
-                        <span class="dog-text full-width">
-                            {{this.note}}
-                        </span>
-                    </p>
-                </div>
+    <div class="row">
+        <div class="col-sm-5">
+            <div id="profile" class="card-header">
+                {{cloudinaryIMG this.picture width=250 height=250}}
             </div>
         </div>
-        <hr />
-    {{/each}}
 
+        <div class="col-sm-7">
+            <div class="card-body mp-reset">
+                <p class="float-right">
+                    {{#if ../userProfile.isCurrentUser}}
+                    <a href="/dog/{{this.id}}" class="btn btn-info btn-lg">
+                        <i class="fas fa-cog fa-2x"></i>
+                        <span class="button-text">Edit Dog</span>
+                    </a>
+                    {{/if}}
+                    <br>
+                </p>
+
+                <h3 class="card-title full-width"> {{this.name}} </h3>
+
+                <p class="card-text">
+                    <i class="fas fa-dog fa-3x float-left"> </i>
+                    <span class="dog-text full-width">
+                        {{this.breed}}
+                    </span>
+                </p>
+
+                <p class="card-text">
+                    <i class="fas fa-circle fa-3x float-left"> </i>
+                    <span class="dog-text full-width">
+                        {{this.gender}}
+                    </span>
+                </p>
+
+                <p class="card-text">
+                    <i class="fas fa-sticky-note fa-3x float-left"></i>
+                    <span class="dog-text full-width">
+                        {{this.note}}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    {{/each}}
+</div>
+
+<div class="footer-margin">
     <footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
 
         <ul class="list-unstyled list-inline text-center">
@@ -77,7 +79,6 @@
                         Home
                         <br />
                         <i class="fas fa-paw fa-5px"></i>
-                        <i class="fas fa-paw fa-5px"></i>
                     </button>
                 </a>
             </li>
@@ -86,7 +87,6 @@
                     <button class="btn btn-secondary btn-lg nav-btn">
                         New Post
                         <br />
-                        <i class="fas fa-pen-fancy fa-5px"></i>
                         <i class="fas fa-pen-fancy fa-5px"></i>
                     </button>
                 </a>
@@ -97,7 +97,6 @@
                         View All Posts
                         <br />
                         <i class="fas fa-bone fa-5px"></i>
-                        <i class="fas fa-bone fa-5px"></i>
                     </button>
                 </a>
             </li>
@@ -107,9 +106,9 @@
                         Lost Dogs
                         <br />
                         <i class="fas fa-location-arrow fa-5px"></i>
-                        <i class="fas fa-location-arrow fa-5px"></i>
                     </button>
                 </a>
             </li>
         </ul>
     </footer>
+</div>

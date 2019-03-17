@@ -12,82 +12,80 @@
             </p>
             <div class="row">
                 {{#each userPostsArray}}
-                    <div class="card mt-4 col-6 float-left">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>
-                                        {{this.type}}
-                                    </p>
-                                </div>
+                <div class="card mt-4 col-6 float-left">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    {{this.type}}
+                                </p>
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>
-                                        {{this.name}}
-                                    </p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="mt-5">
-                                        {{!-- This redirects to updatePost/Post's ID which we then use so the user can edit
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    {{this.name}}
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="mt-5">
+                                    {{!-- This redirects to updatePost/Post's ID which we then use so the user can edit
                                     this post --}}
-                                        <a href="/post/{{this.id}}">Update the Post</a>
-                                        <br>
-                                        <a href="/home">← Back To Home</a>
-                                    </p>
-                                </div>
+                                    <a href="/post/{{this.id}}">Update the Post</a>
+                                    <br>
+                                    <a href="/home">← Back To Home</a>
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
                 {{/each}}
             </div>
         </div>
     </div>
 </div>
 
-<footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
+<div class="footer-margin">
+    <footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
 
-    <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
 
-            <a href="/" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    Home
-                    <br />
-                    <i class="fas fa-paw fa-5px"></i>
-                    <i class="fas fa-paw fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/posts" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    New Post
-                    <br />
-                    <i class="fas fa-pen-fancy fa-5px"></i>
-                    <i class="fas fa-pen-fancy fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/allposts" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    View All Posts
-                    <br />
-                    <i class="fas fa-bone fa-5px"></i>
-                    <i class="fas fa-bone fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/lostdogs" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    Lost Dogs
-                    <br />
-                    <i class="fas fa-location-arrow fa-5px"></i>
-                    <i class="fas fa-location-arrow fa-5px"></i>
-                </button>
-            </a>
-        </li>
-    </ul>
-</footer>
+                <a href="/" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        Home
+                        <br />
+                        <i class="fas fa-paw fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/posts" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        New Post
+                        <br />
+                        <i class="fas fa-pen-fancy fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/allposts" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        View All Posts
+                        <br />
+                        <i class="fas fa-bone fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/lostdogs" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        Lost Dogs
+                        <br />
+                        <i class="fas fa-location-arrow fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>

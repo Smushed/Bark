@@ -1,0 +1,33 @@
+.dog-name {
+    font-size: 58px;
+}
+
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+.header {
+    color: rgb(2, 2, 117);
+    margin-top: 85px;
+    font-size: 7em;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 5px 2px rgb(149, 181, 240);
+}
+
+.dog-content {
+    margin-top: 100px;
+}
+
+.updatedDogName {
+    margin-top: 5px;
+    height: 100px;
+    font-size: 36px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.update-name-label {
+    font-size: 50px;
+    font-family: 'Concert One', cursive;
+    font-weight: 800;
+}

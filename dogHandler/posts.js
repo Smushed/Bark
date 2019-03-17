@@ -73,10 +73,9 @@ module.exports = {
                         }).then(() => {
                             user.allPostsArray[i].username = firstname
                         });
-                }
-            });
-        console.log(user)
+                };
 
+            });
         return user;
 
     },

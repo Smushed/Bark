@@ -13,78 +13,76 @@
             <h2 class="text-center">Lost Dogs!</h2>
             <div class="row">
                 {{#each lostDogArray}}
-                    <div class="card mt-4 col-12">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3 class="text-center">{{this.name}}</h3>
-                                    <div class="text-center">
-                                        {{cloudinaryIMG this.picture width=150 height=150}}
-                                    </div>
+                <div class="card mt-4 col-12">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="text-center">{{this.name}}</h3>
+                                <div class="text-center">
+                                    {{cloudinaryIMG this.picture width=150 height=150}}
                                 </div>
-                                <div class="col-6">
-                                    <p class="mp-reset">{{this.breed}}</p>
-                                    <p class="mp-reset"><strong>Contact: </strong>{{this.ownerName}}</p>
-                                    <p class="mp-reset"><strong>Phone Number: </strong>{{this.phone}}</p>
-                                    <p class="mp-reset"><strong>From: </strong>{{this.zip}}</p>
-                                    <p class="mp-reset">{{this.text}}</p>
-                                    {{#if this.ownDog}}
-                                        <button class="foundDog btn btn-primary" value="{{this.id}}">Found them!</button>
-                                    {{/if}}
-                                </div>
+                            </div>
+                            <div class="col-6">
+                                <p class="mp-reset">{{this.breed}}</p>
+                                <p class="mp-reset"><strong>Contact: </strong>{{this.ownerName}}</p>
+                                <p class="mp-reset"><strong>Phone Number: </strong>{{this.phone}}</p>
+                                <p class="mp-reset"><strong>From: </strong>{{this.zip}}</p>
+                                <p class="mp-reset">{{this.text}}</p>
+                                {{#if this.ownDog}}
+                                <button class="foundDog btn btn-primary" value="{{this.id}}">Found them!</button>
+                                {{/if}}
                             </div>
                         </div>
                     </div>
+                </div>
                 {{/each}}
             </div>
         </div>
     </div>
 </div>
-<footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
+<div class="footer-margin">
+    <footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
 
-    <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
 
-            <a href="/" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    Home
-                    <br />
-                    <i class="fas fa-paw fa-5px"></i>
-                    <i class="fas fa-paw fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/posts" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    New Post
-                    <br />
-                    <i class="fas fa-pen-fancy fa-5px"></i>
-                    <i class="fas fa-pen-fancy fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/allposts" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    View All Posts
-                    <br />
-                    <i class="fas fa-bone fa-5px"></i>
-                    <i class="fas fa-bone fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/lostdogs" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    Lost Dogs
-                    <br />
-                    <i class="fas fa-location-arrow fa-5px"></i>
-                    <i class="fas fa-location-arrow fa-5px"></i>
-                </button>
-            </a>
-        </li>
-    </ul>
-</footer>
+                <a href="/" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        Home
+                        <br />
+                        <i class="fas fa-paw fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/posts" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        New Post
+                        <br />
+                        <i class="fas fa-pen-fancy fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/allposts" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        View All Posts
+                        <br />
+                        <i class="fas fa-bone fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/lostdogs" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        Lost Dogs
+                        <br />
+                        <i class="fas fa-location-arrow fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>
 
 <script src="/js/foundDog.js"></script>
