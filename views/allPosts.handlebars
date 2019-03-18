@@ -9,72 +9,70 @@
     </div>
     <div class="row">
         {{#each allPostsArray}}
-            <div class="card mt-4 col-sm-12 float-left">
-                <div class="card-title">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <strong>{{this.breed}}</strong>
-                            <p class="post-user">{{this.username}}</p>
-                            <p class="post-type">{{this.type}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <p>
-                                {{this.body}}
-                            </p>
-                        </div>
+        <div class="card mt-4 col-sm-12 float-left">
+            <div class="card-title">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <strong>{{this.breed}}</strong>
+                        <p class="post-user">{{this.username}}</p>
+                        <p class="post-type">{{this.type}}</p>
                     </div>
                 </div>
             </div>
+            <div class="card-text">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>
+                            {{this.body}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{/each}}
     </div>
 </div>
-<footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
+<div class="footer-margin">
+    <footer class="page-footer blue fixed-bottom scrolling-footer" id="navbar">
 
-    <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
 
-            <a href="/" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    Home
-                    <br />
-                    <i class="fas fa-paw fa-5px"></i>
-                    <i class="fas fa-paw fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/posts" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    New Post
-                    <br />
-                    <i class="fas fa-pen-fancy fa-5px"></i>
-                    <i class="fas fa-pen-fancy fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/allposts" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    View All Posts
-                    <br />
-                    <i class="fas fa-bone fa-5px"></i>
-                    <i class="fas fa-bone fa-5px"></i>
-                </button>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="/lostdogs" class="mx-1">
-                <button class="btn btn-secondary btn-lg nav-btn">
-                    Lost Dogs
-                    <br />
-                    <i class="fas fa-location-arrow fa-5px"></i>
-                    <i class="fas fa-location-arrow fa-5px"></i>
-                </button>
-            </a>
-        </li>
-    </ul>
-</footer>
+                <a href="/" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        Home
+                        <br />
+                        <i class="fas fa-paw fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/posts" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        New Post
+                        <br />
+                        <i class="fas fa-pen-fancy fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/allposts" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        View All Posts
+                        <br />
+                        <i class="fas fa-bone fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/lostdogs" class="mx-1">
+                    <button class="btn btn-secondary btn-lg nav-btn">
+                        Lost Dogs
+                        <br />
+                        <i class="fas fa-location-arrow fa-5px"></i>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>

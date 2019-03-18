@@ -1,5 +1,5 @@
 const validateNewDog = () => {
-    if ($(`.fileUpload`).val() === `` || $(`.dogName`).val() === ``) {
+    if ($(`.fileUpload`).val() === `` || $(`.updatedDogName`).val() === ``) {
         $(`.errorMessage`).show();
         event.preventDefault();
     };
