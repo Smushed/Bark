@@ -90,7 +90,7 @@ module.exports = function (app) {
   app.post("/api/lostdog", async function (req, res) {
     await userDogs.lostDog(req.body);
 
-    res.redirect("/lostdogs")
+    res.json({ redirect: "/lostdogs" })
   });
 
   app.put("/api/founddog", async function (req, res) {

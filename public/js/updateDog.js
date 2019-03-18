@@ -51,7 +51,10 @@ $(".lostDog").on("click", async function () {
                 url: "/api/lostdog",
                 type: "POST",
                 data: lostDog,
-                datatype: "json"
+                datatype: "json",
+                success: (res) => {
+                    window.location.href = res.redirect;
+                }
             })
         }
     })
