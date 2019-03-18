@@ -13,9 +13,6 @@ img {
     color: #FFC97F;
     font-size: 150px;
     text-shadow:  2px 2px black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
 }
 
 body {
@@ -34,8 +31,15 @@ body {
     width: 75%;
     height: 100px;
     font-size: 40px;
+    border-radius: 15px;
 }
 
 .link-to-sign-up {
     width: 75%;
+}
+
+.sign-in-btn {
+    background: rgb(240, 176, 88);
+    font-weight: 600;
+    color: white;
 }
