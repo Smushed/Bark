@@ -7,10 +7,11 @@
     color: rgb(57, 125, 161);
     text-shadow: 4px 4px navy;
     font-size: 150px;
-    margin-top: 100px;
+    margin-bottom: 75px;
 }
 
 .sign-up-dog {
+    margin-top: 50px;
     margin-left: 100px;
 }
 
@@ -36,11 +37,10 @@ form {
 }
 
 #submit {
-    background-color: rgb(216, 154, 74);
-    border: 2px burlywood solid;
     height: 100px;
     width: 50%;
     font-size: 40px;
+    border-radius: 15px;
 }
 
 .alert {
@@ -52,4 +52,5 @@ form {
     width: 490px;
     font-size: 40px;
     margin-top: 10px;
+    border-radius: 15px;
 }
