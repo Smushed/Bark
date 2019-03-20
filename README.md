@@ -1,3 +1,4 @@
-# teamAwesome
-Project 2 for 08 2018 Northwestern Bootcamp
 
+
+Email: test1@gmail.com
+Password: 123456
